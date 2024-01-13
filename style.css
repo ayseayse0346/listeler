@@ -1,0 +1,203 @@
+/* hoca attı font family biz de siteden yapabiliriz google fonts sitesinden*/
+@import url('https://fonts.googleapis.com/css2?family=Bitter:ital@0;1&family=Caveat:wght@400;500&family=Montserrat:ital,wght@1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bitter:ital@0;1&display=swap');
+
+* {
+    /* margin: 0; */
+}
+
+.languages {
+    border: 2px solid red;
+    /* padding: 0; verdiğimizde noktalar gider listeler defult olarak bize padding verir. pading sıfır  */
+
+    /* madde imi stilleri
+list style type ile */
+    list-style-type: none;
+    list-style-type: square;
+    list-style-type: circle;
+    list-style-type: lower-alpha;
+    list-style-type: georgian;
+    list-style-type: disc;
+
+    /* madde imleri lilerin içinde mi dışında mı  */
+
+    list-style-position: inside;
+    /* outside yapsayıdk burayı ev ikonları dışarıda olacaktı. */
+    list-style-image: url(./img/house-solid.svg);
+
+    color: blue;
+    /* ama başındaki ikonların rengi değişmez.  */
+}
+
+/* ul.languages{} bu da yukarıyla aynı clası languages olan ul demek yani eğer */
+
+h1 {
+    color: blueviolet;
+    /* başlığa hangi rengi verirsek oraya verdiğimiz ikon da aynı rengi alır. */
+}
+
+/* ul.languages li{ bu şekilde de li leri seçip özellik verdiğimizi gösterebiliriz. */
+ul.languages li {
+    background-color: brown;
+    margin: 5px;
+    width: 250px;
+    border-radius: 5px;
+    padding-left: 20px;
+    border: 1px solid gray;
+    /* border-left: 5px solid red; bu şekilde baştakileri border yapabiliriz. */
+}
+
+/*h1 i{ color: chartreuse;} bununla verdiğimiz ikonun rengini değiştireblilirz. yıldızın rengi değişti */
+h1 i {
+    color: chartreuse;
+}
+
+/* HOVER ÖZELLİĞİ VERDİK LİLERE */
+ul.languages li:hover {
+    opacity: 0.8;
+    /* opacity: 0.8;  bu şekilde görünürlüğü yani silikliği azaltıyoruz. sıfırdan bire kadar değer verebiliyoruz.*/
+    cursor: pointer;
+}
+
+ul.languages li:hover {
+    background-color: chartreuse;
+}
+
+/* li:hover{ normalde bu şekildede olabilir ama yukarıda ul language dedğimiz için ezemedik mecbur böyle verdik */
+
+body {
+    background-color: gray;
+    /* background-image: cross-fade(); BUNU SOR '!!!11 */
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* PSEUDO CLASS */
+
+ul.pseudo li:first-child {
+    color: red;
+}
+
+ul.pseudo li:last-child {
+    color: blue;
+    font-family: 'Bitter', serif;
+}
+
+ul.pseudo li:nth-child(3) {
+    color: blueviolet;
+}
+
+ul.pseudo li:nth-child(5) {
+    color: olive;
+    font-size: 2rem;
+    list-style-type: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+}
+
+ul.pseudo li:nth-child(odd) {
+background-color: cadetblue;
+}
+ul.pseudo li:nth-child(even){
+background-color: burlywood;
+}
+ul.pseudo li:hover {
+    background-color: aqua;
+}
+
+ul.pseudo li:active {
+    background-color: black;
+    color: white;
+}
+
+/* İNPUT FOKUS  */
+input:focus {
+    background-color: tomato;
+    color: white;
+    border: 4px dashed black;
+}
+
+/* LİNK PSEUDO CLASS */
+nav.link a:link {
+    color: red;
+
+}
+
+nav.link a:visited {
+    color: darkgreen;
+
+}
+
+nav.link a:active {
+    color: mediumvioletred;
+
+}
+
+nav.link a:hover {
+    color: blue;
+
+}
+
+nav.cw a {
+    text-decoration: none;
+    border: 2px solid darkorange;
+    padding: 5px;
+    margin: 10px;
+    color: darkorange;
+    border-radius: 10px;
+
+}
+
+nav.cw a:hover {
+    background-color: gold;
+    color: chartreuse;
+}
+
+nav.cw a:hover i {
+    color: purple;
+}
+
+/* nav.cw a:hover i{
+    color: purple;}
+    BU İ LE SEÇTİĞİMİZ İKON RENGİ DEĞİŞİR*/
+
+nav a i {
+    font-size: 1.1rem;
+}
+
+/* PSEUDO ELEMENTS */
+.p-elements::first-line {
+    color: red;
+}
+
+.p-elements::first-letter {
+    font-size: 2rem;
+    font-weight: 900;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+ul.before-after {
+    list-style-type: none;
+
+}
+
+ul.before-after li {
+    background-color: aqua;
+    margin: 0.5rem;
+    width: 40%;
+    border-radius: 10px;
+    /* text-align: center; */
+}
+
+ul.before-after li::before {
+    content: '👍';
+    /* 👍bunun için windows . yapınca çıkar */
+    margin: 10px;
+}
+
+ul.before-after li:nth-child(2)::after {
+    content: '👌';
+    margin: 10px;
+}
+
+
+/* ul languageye de uygualdık incele */
